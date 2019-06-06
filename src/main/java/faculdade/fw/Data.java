@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package faculdade.fw;
 
 import java.sql.Connection;
@@ -12,10 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
 
-/**
- *
- * @author dirceu
- */
 public class Data {
 
     public static Connection openConnection() throws Exception {

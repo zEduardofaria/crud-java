@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package faculdade.fw;
 
 import java.sql.Date;
@@ -12,11 +8,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.TimeZone;
 
-/**
- *
- * @author Dirceu
- * @ajuda Stefano
- */
 public class DateTime implements Comparable {
 
     private long millis = 0;

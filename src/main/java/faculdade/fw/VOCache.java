@@ -1,13 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package faculdade.fw;
 
-/**
- *
- * @author dirceubelem
- */
 public class VOCache {
 
     private long expire;

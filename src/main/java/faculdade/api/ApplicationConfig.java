@@ -4,9 +4,6 @@ package faculdade.api;
 import javax.ws.rs.core.Application;
 import java.util.Set;
 
-/**
- * @author dirceubelem
- */
 @javax.ws.rs.ApplicationPath("v1")
 public class ApplicationConfig extends Application {
 

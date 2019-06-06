@@ -1,15 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package faculdade.fw;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- *
- * @author dirceubelem
- */
 public class Cache {
 
     private static boolean active = true;
