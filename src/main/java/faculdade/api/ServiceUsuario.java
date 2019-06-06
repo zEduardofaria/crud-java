@@ -1,8 +1,8 @@
 package faculdade.api;
 
-import faculdade.bo.BOAccount;
+import faculdade.bo.BOUsuario;
 import faculdade.fw.Cache;
-import faculdade.to.TOAccount;
+import faculdade.to.TOUsuario;
 import com.sun.corba.se.impl.oa.toa.TOA;
 import org.json.JSONObject;
 
@@ -12,8 +12,8 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import java.util.List;
 
-@Path("account")
-public class ServiceAccount {
+@Path("usuario")
+public class ServiceUsuario {
 
     @Context
     protected HttpServletResponse response;
@@ -21,36 +21,35 @@ public class ServiceAccount {
     protected HttpServletRequest request;
 
     @POST
-    @Path("auth")
+    @Path("autenticar")
     @Consumes("application/json;charset=utf-8")
     @Produces("application/json;charset=utf-8")
-    public TOAccount auth(TOAccount u) throws Exception {
+    public TOUsuario autenticar(TOUsuario model) throws Exception {
 
-        TOAccount t = BOAccount.auth(u);
+        TOUsuario usuario = BOUsuario.autenticar(model);
 
-        if (t == null) {
+        if (usuario == null) {
             response.sendError(HttpServletResponse.SC_FORBIDDEN);
         }
 
-        return t;
-
+        return usuario;
     }
 
     @POST
-    @Path("forgot")
+    @Path("esqueciMinhaSenha")
     @Consumes("application/json;charset=utf-8")
-    public void forgot(TOAccount u) throws Exception {
-        TOAccount t = BOAccount.forgot(u);
-        if (t == null) {
+    public void esqueciMinhaSenha(TOUsuario model) throws Exception {
+        TOUsuario usuario = BOUsuario.esqueciMinhaSenha(model);
+        if (usuario == null) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
         }
     }
 
     @PUT
     @Consumes("application/json;charset=utf-8")
-    public void update(@HeaderParam("token") String token, TOAccount u) throws Exception {
-        if (BOAccount.isValid(token)) {
-            BOAccount.update(u);
+    public void atualizar(@HeaderParam("token") String token, TOUsuario model) throws Exception {
+        if (BOUsuario.isValid(token)) {
+            BOUsuario.atualizar(model);
         } else {
             response.sendError(HttpServletResponse.SC_FORBIDDEN);
         }
@@ -60,11 +59,11 @@ public class ServiceAccount {
     @POST
     @Consumes("application/json;charset=utf-8")
     @Produces("application/json;charset=utf-8")
-    public String insert(TOAccount u) throws Exception {
-        TOAccount t = BOAccount.insert(u);
-        if (t != null) {
+    public String inserir(TOUsuario model) throws Exception {
+        TOUsuario usuario = BOUsuario.inserir(model);
+        if (usuario != null) {
             JSONObject j = new JSONObject();
-            j.put("id", t.getId());
+            j.put("id", usuario.getId());
             return j.toString();
         } else {
             response.sendError(HttpServletResponse.SC_CONFLICT);
@@ -74,12 +73,12 @@ public class ServiceAccount {
 
 
     @GET
-    @Path("me")
+    @Path("meuUsuario")
     @Produces("application/json;charset=utf-8")
-    public TOAccount me(@HeaderParam("token") String token) throws Exception {
+    public TOUsuario meuUsuario(@HeaderParam("token") String token) throws Exception {
 
-        if (BOAccount.isValid(token)) {
-            return BOAccount.me(token);
+        if (BOUsuario.isValid(token)) {
+            return BOUsuario.meuUsuario(token);
         } else {
             response.sendError(HttpServletResponse.SC_FORBIDDEN);
             return null;
@@ -89,8 +88,8 @@ public class ServiceAccount {
 
     @GET
     @Produces("application/json;charset=utf-8")
-    public List<TOAccount> accounts() throws Exception {
-        return BOAccount.accounts();
+    public List<TOUsuario> lista() throws Exception {
+        return BOUsuario.lista();
     }
 
 
