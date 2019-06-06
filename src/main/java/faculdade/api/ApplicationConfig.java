@@ -1,4 +1,4 @@
-package br.com.task.api;
+package faculdade.api;
 
 
 import javax.ws.rs.core.Application;

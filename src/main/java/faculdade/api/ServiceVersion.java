@@ -1,4 +1,4 @@
-package br.com.task.api;
+package faculdade.api;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
