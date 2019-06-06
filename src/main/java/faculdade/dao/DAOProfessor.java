@@ -1,4 +1,51 @@
 package faculdade.dao;
 
 public class DAOProfessor {
+    public static List<TOProfessor> lista(Connection conn) throws Exception {
+
+        StringBuilder sql = new StringBuilder();
+        sql.append(" select id, nome, cpf from Professor ");
+        sql.append(" order by nome ");
+
+        List<TOProfessor> lista = new ArrayList<>();
+
+        try (ResultSet rs = Data.executeQuery(conn, sql.toString())) {
+
+            while (rs.next()) {
+                TOProfessor professor = new TOProfessor();
+                professor.setId(rs.getString("id"));
+                professor.setNome(rs.getString("nome"));
+                professor.setNome(rs.getString("cpf"));
+                lista.add(professor);
+            }
+
+        }
+        return lista;
+    }
+
+    public static void inserir(Connection conn, TOProfessor professor) throws Exception {
+        StringBuilder sql = new StringBuilder();
+        sql.append(" insert into Professor (nome, cpf) values ");
+        sql.append(" (?, ?) ");
+        Data.executeUpdate(conn, sql.toString(), professor.getNome());
+    }
+
+    public static void atualizar(Connection conn, TOProfessor professor) throws Exception {
+        StringBuilder sql = new StringBuilder();
+        sql.append(" update Professor set nome = ?, cpf = ?");
+        sql.append(" where id = ? ");
+        Data.executeUpdate(conn, sql.toString(), professor.getNome(), professor.getCpf(), professor.getId());
+    }
+
+    public static void deletar(Connection conn, String id) throws Exception {
+
+        StringBuilder sql = new StringBuilder();
+        sql.append(" delete from Professor");
+        sql.append(" where ");
+        sql.append(" id = ? ");
+
+        try (Data.executeQuery(conn, sql.toString(), id)) {
+
+        }
+    }
 }
