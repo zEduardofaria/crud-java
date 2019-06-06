@@ -1,4 +1,4 @@
-package br.com.task.fw;
+package faculdade.fw;
 
 import java.security.MessageDigest;
 

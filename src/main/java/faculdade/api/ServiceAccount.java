@@ -1,8 +1,8 @@
 package faculdade.api;
 
-import br.com.task.bo.BOAccount;
-import br.com.task.fw.Cache;
-import br.com.task.to.TOAccount;
+import faculdade.bo.BOAccount;
+import faculdade.fw.Cache;
+import faculdade.to.TOAccount;
 import com.sun.corba.se.impl.oa.toa.TOA;
 import org.json.JSONObject;
 

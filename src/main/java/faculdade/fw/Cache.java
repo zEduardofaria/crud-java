@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.task.fw;
+package faculdade.fw;
 
 import java.util.concurrent.ConcurrentHashMap;
 

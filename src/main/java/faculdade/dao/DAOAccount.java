@@ -1,7 +1,7 @@
-package br.com.task.dao;
+package faculdade.dao;
 
-import br.com.task.fw.Data;
-import br.com.task.to.TOAccount;
+import faculdade.fw.Data;
+import faculdade.to.TOAccount;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

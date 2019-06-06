@@ -1,8 +1,8 @@
-package br.com.task.bo;
+package faculdade.bo;
 
-import br.com.task.dao.DAOAccount;
-import br.com.task.fw.*;
-import br.com.task.to.TOAccount;
+import faculdade.dao.DAOAccount;
+import faculdade.fw.*;
+import faculdade.to.TOAccount;
 import com.sun.corba.se.impl.oa.toa.TOA;
 
 import java.sql.Connection;
