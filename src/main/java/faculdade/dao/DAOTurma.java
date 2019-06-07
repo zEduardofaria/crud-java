@@ -45,7 +45,7 @@ public class DAOTurma {
         Data.executeUpdate(conn, sql.toString(), turma.getIdProfessor(), turma.getIdDisciplina(), turma.getId());
     }
 
-    public static void deletar(Connection conn, String id) throws Exception {
+    public static void deletar(Connection conn, int id) throws Exception {
 
         StringBuilder sql = new StringBuilder();
         sql.append(" delete from Turma");
