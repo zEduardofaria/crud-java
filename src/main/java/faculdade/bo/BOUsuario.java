@@ -1,5 +1,14 @@
 package faculdade.bo;
 
+import faculdade.dao.DAOUsuario;
+import faculdade.fw.Data;
+import faculdade.fw.DateTime;
+import faculdade.fw.Encrypt;
+import faculdade.to.TOUsuario;
+
+import java.sql.Connection;
+import java.util.List;
+
 public class BOUsuario {
 
     public static boolean isValid(String token) throws Exception {
@@ -11,7 +20,7 @@ public class BOUsuario {
             }
 
             DateTime now = DateTime.now();
-            return usuario.getExpiredAt().getTime() > now.getMillis()
+            return usuario.getExpiraEm().getTime() > now.getMillis()
         }
     }
 

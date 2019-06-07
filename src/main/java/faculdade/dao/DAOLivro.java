@@ -1,5 +1,13 @@
 package faculdade.dao;
 
+import faculdade.fw.Data;
+import faculdade.to.TOLivro;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 public class DAOLivro {
     public static List<TOLivro> lista(Connection conn) throws Exception {
 
@@ -13,7 +21,7 @@ public class DAOLivro {
 
             while (rs.next()) {
                 TOLivro livro = new TOLivro();
-                livro.setId(rs.getString("id"));
+                livro.setId(rs.getInt("id"));
                 livro.setNome(rs.getString("nome"));
                 livro.setAutor(rs.getString("autor"));
                 livro.setCategoria(rs.getString("categoria"));

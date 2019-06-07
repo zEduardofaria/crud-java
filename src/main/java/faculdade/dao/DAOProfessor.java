@@ -1,5 +1,13 @@
 package faculdade.dao;
 
+import faculdade.fw.Data;
+import faculdade.to.TOProfessor;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 public class DAOProfessor {
     public static List<TOProfessor> lista(Connection conn) throws Exception {
 
@@ -13,7 +21,7 @@ public class DAOProfessor {
 
             while (rs.next()) {
                 TOProfessor professor = new TOProfessor();
-                professor.setId(rs.getString("id"));
+                professor.setId(rs.getInt("id"));
                 professor.setNome(rs.getString("nome"));
                 professor.setNome(rs.getString("cpf"));
                 lista.add(professor);

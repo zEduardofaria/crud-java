@@ -1,5 +1,13 @@
 package faculdade.dao;
 
+import faculdade.fw.Data;
+import faculdade.to.TOAluno;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 public class DAOAluno {
         public static List<TOAluno> lista(Connection conn) throws Exception {
 
@@ -13,7 +21,6 @@ public class DAOAluno {
 
             while (rs.next()) {
                 TOAluno aluno = new TOAluno();
-                aluno.setId(rs.getString("id"));
                 aluno.setNome(rs.getString("nome"));
                 aluno.setMatricula(rs.getString("matricula"));
                 lista.add(aluno);
@@ -44,7 +51,7 @@ public class DAOAluno {
         sql.append(" where ");
         sql.append(" id = ? ");
 
-        try (Data.executeQuery(conn, sql.toString(), id)) {
+        try (Data.executeUpdate(conn, sql.toString(), id)) {
 
         }
     }

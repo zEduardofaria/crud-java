@@ -1,5 +1,13 @@
 package faculdade.dao;
 
+import faculdade.fw.Data;
+import faculdade.to.TOUsuario;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 public class DAOUsuario {
     
     public static TOUsuario getByToken(Connection conn, String token) throws Exception {
@@ -14,7 +22,7 @@ public class DAOUsuario {
 
             if (rs.next()) {
                 TOUsuario usuario = new TOUsuario();
-                usuario.setId(rs.getString("id"));
+                usuario.setId(rs.getInt("id"));
                 usuario.setNome(rs.getString("nome"));
                 usuario.setEmail(rs.getString("email"));
                 usuario.setToken(rs.getString("token"));
@@ -29,7 +37,7 @@ public class DAOUsuario {
         }
     }
 
-    public static TOUsuario getByEmail(Connection conn, TOUsuario usuario) throws Exception {
+    public static TOUsuario getByEmail(Connection conn, TOUsuario model) throws Exception {
 
         StringBuilder sql = new StringBuilder();
         sql.append(" select id, nome, email, senha, token, criadoEm, ativo, expiraEm from account ");
@@ -37,11 +45,11 @@ public class DAOUsuario {
         sql.append(" email = ? ");
         sql.append(" and ativo ");
 
-        try (ResultSet rs = Data.executeQuery(conn, sql.toString(), usuario.getEmail())) {
+        try (ResultSet rs = Data.executeQuery(conn, sql.toString(), model.getEmail())) {
 
             if (rs.next()) {
                 TOUsuario usuario = new TOUsuario();
-                usuario.setId(rs.getString("id"));
+                usuario.setId(rs.getInt("id"));
                 usuario.setNome(rs.getString("nome"));
                 usuario.setEmail(rs.getString("email"));
                 usuario.setToken(rs.getString("token"));
@@ -69,7 +77,7 @@ public class DAOUsuario {
 
             while (rs.next()) {
                 TOUsuario usuario = new TOUsuario();
-                usuario.setId(rs.getString("id"));
+                usuario.setId(rs.getInt("id"));
                 usuario.setNome(rs.getString("nome"));
                 usuario.setEmail(rs.getString("email"));
                 usuario.setToken(rs.getString("token"));
@@ -108,7 +116,7 @@ public class DAOUsuario {
 
             if (rs.next()) {
                 usuario = new TOUsuario();
-                usuario.setId(rs.getString("id"));
+                usuario.setId(rs.getInt("id"));
                 usuario.setNome(rs.getString("nome"));
                 usuario.setEmail(rs.getString("email"));
                 usuario.setToken(rs.getString("token"));
@@ -130,7 +138,7 @@ public class DAOUsuario {
         sql.append(" set token = ?, expiraEm = ? ");
         sql.append(" where id = ? ");
 
-        Data.executeUpdate(conn, sql.toString(), usuario.getToken(), usuario.getexpiraEm(), usuario.getId());
+        Data.executeUpdate(conn, sql.toString(), usuario.getToken(), usuario.getExpiraEm()iraEm(), usuario.getId());
 
     }
 }

@@ -1,5 +1,13 @@
 package faculdade.dao;
 
+import faculdade.fw.Data;
+import faculdade.to.TOTurma;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
 public class DAOTurma {
     public static List<TOTurma> lista(Connection conn) throws Exception {
 
@@ -13,9 +21,9 @@ public class DAOTurma {
 
             while (rs.next()) {
                 TOTurma turma = new TOTurma();
-                turma.setId(rs.getString("id"));
-                turma.setIdProfessor(rs.getString("idProfessor"));
-                turma.setIdDisciplina(rs.getString("idDisciplina"));
+                turma.setId(rs.getInt("id"));
+                turma.setIdProfessor(rs.getInt("idProfessor"));
+                turma.setIdDisciplina(rs.getInt("idDisciplina"));
                 lista.add(turma);
             }
 

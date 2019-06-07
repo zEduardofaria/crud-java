@@ -1,5 +1,11 @@
 package faculdade.bo;
 
+import faculdade.dao.DAODisciplina;
+import faculdade.to.TODisciplina;
+import faculdade.fw.Data;
+import java.sql.Connection;
+import java.util.List;
+
 public class BODisciplina {
     public static List<TODisciplina> lista() throws Exception {
         try (Connection conn = Data.openConnection()) {
@@ -9,17 +15,8 @@ public class BODisciplina {
 
     public static TODisciplina inserir(TODisciplina model) throws Exception {
         try (Connection conn = Data.openConnection()) {
-
-            TODisciplina disciplina = DAODisciplina.getByEmail(conn, model);
-            if (disciplina != null) {
-                return null;
-            }
-
-            model.setId(Guid.getString());
             DAODisciplina.inserir(conn, model);
-            
             return model;
-
         }
     }
 

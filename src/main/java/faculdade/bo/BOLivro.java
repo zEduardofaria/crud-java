@@ -1,5 +1,12 @@
 package faculdade.bo;
 
+import faculdade.dao.DAOLivro;
+import faculdade.fw.Data;
+import faculdade.to.TOLivro;
+
+import java.sql.Connection;
+import java.util.List;
+
 public class BOLivro {
     public static List<TOLivro> lista() throws Exception {
         try (Connection conn = Data.openConnection()) {
@@ -10,14 +17,7 @@ public class BOLivro {
     public static TOLivro inserir(TOLivro model) throws Exception {
         try (Connection conn = Data.openConnection()) {
 
-            TOLivro livro = DAOLivro.getByEmail(conn, model);
-            if (livro != null) {
-                return null;
-            }
-
-            model.setId(Guid.getString());
             DAOLivro.inserir(conn, model);
-            
             return model;
 
         }
@@ -32,7 +32,6 @@ public class BOLivro {
     public static TOLivro deletar(String id) throws Exception {
 
         try (Connection conn = Data.openConnection()) {
-
             TOLivro livro = DAOLivro.deletar(conn, id);
 
             return livro;

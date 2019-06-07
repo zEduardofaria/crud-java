@@ -1,5 +1,12 @@
 package faculdade.bo;
 
+import faculdade.dao.DAOAluno;
+import faculdade.fw.Data;
+import faculdade.to.TOAluno;
+
+import java.sql.Connection;
+import java.util.List;
+
 public class BOAluno {
 
     public static List<TOAluno> lista() throws Exception {
@@ -11,17 +18,9 @@ public class BOAluno {
     public static TOAluno inserir(TOAluno model) throws Exception {
         try (Connection conn = Data.openConnection()) {
 
-            TOAluno aluno = DAOAluno.getByEmail(conn, model);
-            if (aluno != null) {
-                return null;
-            }
-
-            model.setId(Guid.getString());
-            model.setSenha(Encrypt.sha1(model.getSenha()));
             DAOAluno.inserir(conn, model);
             
             return model;
-
         }
     }
 
@@ -31,13 +30,11 @@ public class BOAluno {
         }
     }
 
-    public static TOAluno deletar(String id) throws Exception {
+    public static void deletar(String id) throws Exception {
 
         try (Connection conn = Data.openConnection()) {
 
-            TOAluno aluno = DAOAluno.deletar(conn, id);
-
-            return aluno;
+            DAOAluno.deletar(conn, id);
         }
     }
 }

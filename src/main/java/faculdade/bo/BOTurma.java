@@ -1,5 +1,12 @@
 package faculdade.bo;
 
+import faculdade.dao.DAOTurma;
+import faculdade.fw.Data;
+import faculdade.to.TOTurma;
+
+import java.sql.Connection;
+import java.util.List;
+
 public class BOTurma {
 
     public static List<TOTurma> lista() throws Exception {
@@ -11,12 +18,6 @@ public class BOTurma {
     public static TOTurma inserir(TOTurma model) throws Exception {
         try (Connection conn = Data.openConnection()) {
 
-            TOTurma turma = DAOTurma.getByEmail(conn, model);
-            if (turma != null) {
-                return null;
-            }
-
-            model.setId(Guid.getString());
             DAOTurma.inserir(conn, model);
             
             return model;
