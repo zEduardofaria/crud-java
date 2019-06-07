@@ -45,7 +45,7 @@ public class DAOProfessor {
         Data.executeUpdate(conn, sql.toString(), professor.getNome(), professor.getCpf(), professor.getId());
     }
 
-    public static void deletar(Connection conn, String id) throws Exception {
+    public static void deletar(Connection conn, int id) throws Exception {
 
         StringBuilder sql = new StringBuilder();
         sql.append(" delete from Professor");
