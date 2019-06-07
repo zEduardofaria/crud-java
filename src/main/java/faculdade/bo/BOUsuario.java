@@ -4,6 +4,7 @@ import faculdade.dao.DAOUsuario;
 import faculdade.fw.Data;
 import faculdade.fw.DateTime;
 import faculdade.fw.Encrypt;
+import faculdade.fw.Guid;
 import faculdade.to.TOUsuario;
 
 import java.nio.charset.Charset;
@@ -51,7 +52,7 @@ public class BOUsuario {
             TOUsuario usuario = DAOUsuario.getByEmail(conn, model);
             if (usuario != null) {
 
-                String novaSenha = generateRandomPassword(8);
+                String novaSenha = Guid.getString().substring(0,8);
 
                 usuario.setSenha(Encrypt.sha1(novaSenha));
                 DAOUsuario.atualizar(conn, usuario);
@@ -98,7 +99,7 @@ public class BOUsuario {
                 expiredAt.addMinute(5);
 
                 usuario.setExpiraEm(expiredAt.getTimestamp());
-                usuario.setToken(generateRandomPassword(40));
+                usuario.setToken(Guid.getString());
                 DAOUsuario.atualizarToken(conn, usuario);
             }
 
