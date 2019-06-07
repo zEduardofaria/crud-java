@@ -6,8 +6,10 @@ import faculdade.fw.DateTime;
 import faculdade.fw.Encrypt;
 import faculdade.to.TOUsuario;
 
+import java.nio.charset.Charset;
 import java.sql.Connection;
 import java.util.List;
+import java.util.Random;
 
 public class BOUsuario {
 
@@ -20,7 +22,7 @@ public class BOUsuario {
             }
 
             DateTime now = DateTime.now();
-            return usuario.getExpiraEm().getTime() > now.getMillis()
+            return usuario.getExpiraEm().getTime() > now.getMillis();
         }
     }
 
@@ -36,21 +38,20 @@ public class BOUsuario {
         }
     }
 
+    private static String generateRandomPassword() {
+        byte[] array = new byte[8];
+        new Random().nextBytes(array);
+
+        return new String(array, Charset.forName("UTF-8"));
+    }
+
     public static TOUsuario esqueciMinhaSenha(TOUsuario model) throws Exception {
         try (Connection conn = Data.openConnection()) {
 
             TOUsuario usuario = DAOUsuario.getByEmail(conn, model);
             if (usuario != null) {
 
-                String novaSenha = Guid.getString().substring(0, 8);
-
-                StringBuilder message = new StringBuilder();
-                message.append("Olá ").append(model.getNome()).append(",<br/><br/>");
-                message.append("Aqui está sua nova senha .... ").append(novaSenha).append("<br/><br/>");
-                message.append("A Faculdade");
-
-                Email email = new Email("Esqueci minha senha - Faculdade", message.toString(), model.getEmail());
-                email.start();
+                String novaSenha = generateRandomPassword();
 
                 usuario.setSenha(Encrypt.sha1(novaSenha));
                 DAOUsuario.atualizar(conn, usuario);
@@ -73,7 +74,6 @@ public class BOUsuario {
             TOUsuario usuario = DAOUsuario.getByEmail(conn, model);
             if (usuario == null) {
 
-                model.setId(Guid.getString());
                 model.setSenha(Encrypt.sha1(model.getSenha()));
                 DAOUsuario.inserir(conn, model);
                 
@@ -97,9 +97,8 @@ public class BOUsuario {
                 DateTime expiredAt = DateTime.now();
                 expiredAt.addMinute(5);
 
-                usuario.setExpiredAt(expiredAt.getTimestamp());
+                usuario.setExpiraEm(expiredAt.getTimestamp());
 
-                usuario.setToken(Guid.getString());
                 DAOUsuario.atualizarToken(conn, usuario);
             }
 

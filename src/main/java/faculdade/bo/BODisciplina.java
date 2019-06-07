@@ -26,13 +26,11 @@ public class BODisciplina {
         }
     }
 
-    public static TODisciplina deletar(String id) throws Exception {
+    public static void deletar(int id) throws Exception {
 
         try (Connection conn = Data.openConnection()) {
 
-            TODisciplina disciplina = DAODisciplina.deletar(conn, id);
-
-            return disciplina;
+            DAODisciplina.deletar(conn, id);
         }
     }
 }

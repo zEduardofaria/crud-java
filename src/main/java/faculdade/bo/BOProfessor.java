@@ -30,13 +30,11 @@ public class BOProfessor {
         }
     }
 
-    public static TOProfessor deletar(String id) throws Exception {
+    public static void deletar(int id) throws Exception {
 
         try (Connection conn = Data.openConnection()) {
 
-            TOProfessor professor = DAOProfessor.deletar(conn, id);
-
-            return professor;
+            DAOProfessor.deletar(conn, id);
         }
     }
 }

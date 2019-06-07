@@ -21,10 +21,10 @@ public class DAOAluguel {
 
             while (rs.next()) {
                 TOAluguel aluguel = new TOAluguel();
-                aluguel.setId(rs.getInt("id"))
-                aluguel.setIdLivro(rs.getInt("idLivro"))
-                aluguel.setIdAluno(rs.getInt("idAluno"))
-                aluguel.setDataCriacao(rs.getDateTime("dataCriacao"));
+                aluguel.setId(rs.getInt("id"));
+                aluguel.setIdLivro(rs.getInt("idLivro"));
+                aluguel.setIdAluno(rs.getInt("idAluno"));
+                aluguel.setDataCriacao(rs.getTimestamp("dataCriacao"));
                 lista.add(aluguel);
             }
 
@@ -43,7 +43,7 @@ public class DAOAluguel {
         StringBuilder sql = new StringBuilder();
         sql.append(" update Aluguel set idLivro = ?, idAluno = ?");
         sql.append(" where id = ? ");
-        Data.executeUpdate(conn, sql.toString(), aluguel.getNome(), aluguel.getMatricula(), aluguel.getId());
+        Data.executeUpdate(conn, sql.toString(), aluguel.getIdLivro(), aluguel.getIdAluno(), aluguel.getId());
     }
 
     public static void deletar(Connection conn, int id) throws Exception {

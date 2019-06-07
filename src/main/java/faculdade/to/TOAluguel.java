@@ -1,11 +1,15 @@
 package faculdade.to;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import faculdade.fw.*;
+
+import java.sql.Timestamp;
 
 public class TOAluguel {
     private int id;
     private int idLivro;
     private int idAluno;
-    private DateTime dataCriacao;
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss", timezone = "GMT-3")
+    private Timestamp dataCriacao;
 
     public int getId() {
         return id;
@@ -31,11 +35,11 @@ public class TOAluguel {
         this.idAluno = idAluno;
     }
 
-    public DateTime getDataCriacao() {
+    public Timestamp getDataCriacao() {
         return dataCriacao;
     }
 
-    public void setDataCriacao(DateTime dataCriacao) {
+    public void setDataCriacao(Timestamp dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
 }

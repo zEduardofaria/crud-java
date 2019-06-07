@@ -29,12 +29,10 @@ public class BOLivro {
         }
     }
 
-    public static TOLivro deletar(String id) throws Exception {
+    public static void deletar(int id) throws Exception {
 
         try (Connection conn = Data.openConnection()) {
-            TOLivro livro = DAOLivro.deletar(conn, id);
-
-            return livro;
+            DAOLivro.deletar(conn, id);
         }
     }
 }

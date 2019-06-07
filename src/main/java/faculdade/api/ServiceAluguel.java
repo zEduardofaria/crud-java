@@ -54,7 +54,7 @@ public class ServiceAluguel {
     @DELETE    
     @Consumes("application/json;charset=utf-8")
     @Produces("application/json;charset=utf-8")
-    public void deletar(String id) throws Exception {
+    public void deletar(int id) throws Exception {
         BOAluguel.deletar(id);
     }
 }

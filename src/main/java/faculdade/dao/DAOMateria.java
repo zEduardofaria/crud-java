@@ -21,10 +21,10 @@ public class DAOMateria {
 
             while (rs.next()) {
                 TOMateria materia = new TOMateria();
-                materia.setId(rs.getInt("id"))
-                materia.setNome(rs.getString("nome"))
+                materia.setId(rs.getInt("id"));
+                materia.setNome(rs.getString("nome"));
                 materia.setDescricao(rs.getString("descricao"));
-                materia.setIdDiscplina(rs.getInt("idDiscplina"))
+                materia.setIdDiscplina(rs.getInt("idDiscplina"));
                 lista.add(materia);
             }
 

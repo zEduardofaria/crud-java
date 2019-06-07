@@ -31,13 +31,11 @@ public class BOTurma {
         }
     }
 
-    public static TOTurma deletar(String id) throws Exception {
+    public static void deletar(int id) throws Exception {
 
         try (Connection conn = Data.openConnection()) {
 
-            TOTurma turma = DAOTurma.deletar(conn, id);
-
-            return turma;
+            DAOTurma.deletar(conn, id);
         }
     }
 }

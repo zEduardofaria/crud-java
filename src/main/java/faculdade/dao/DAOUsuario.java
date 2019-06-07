@@ -131,13 +131,13 @@ public class DAOUsuario {
 
     }
 
-    public static void updateToken(Connection conn, TOUsuario usuario) throws Exception {
+    public static void atualizarToken(Connection conn, TOUsuario usuario) throws Exception {
 
         StringBuilder sql = new StringBuilder();
         sql.append(" update account ");
         sql.append(" set token = ?, expiraEm = ? ");
         sql.append(" where id = ? ");
 
-        Data.executeUpdate(conn, sql.toString(), usuario.getToken(), usuario.getExpiraEm()iraEm(), usuario.getId());
+        Data.executeUpdate(conn, sql.toString(), usuario.getToken(), usuario.getExpiraEm(), usuario.getId());
     }
 }

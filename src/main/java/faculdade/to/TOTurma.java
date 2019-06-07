@@ -1,12 +1,13 @@
 package faculdade.to;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TOTurma {
     private int id;
     private int idProfessor;
     private int idDisciplina;
-    private ArrayList<TOAluno> alunos;
+    private List<TOAluno> alunos;
 
     public int getId() {
         return id;
@@ -32,11 +33,11 @@ public class TOTurma {
         this.idDisciplina = idDisciplina;
     }
 
-    public List<Aluno> getAlunos() {
+    public List<TOAluno> getAlunos() {
         return alunos;
     }
 
-    public void setAlunos(List<Aluno> alunos) {
+    public void setAlunos(List<TOAluno> alunos) {
         this.alunos = alunos;
     }
 }

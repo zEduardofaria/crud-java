@@ -30,7 +30,7 @@ public class BOAluguel {
         }
     }
 
-    public static void deletar(String id) throws Exception {
+    public static void deletar(int id) throws Exception {
 
         try (Connection conn = Data.openConnection()) {
 
