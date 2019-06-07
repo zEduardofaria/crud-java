@@ -53,8 +53,6 @@ public class DAOLivro {
         sql.append(" where ");
         sql.append(" id = ? ");
 
-        try (Data.executeQuery(conn, sql.toString(), id)) {
-
-        }
+        Data.executeQuery(conn, sql.toString(), id);
     }
 }

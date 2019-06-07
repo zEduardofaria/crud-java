@@ -139,6 +139,5 @@ public class DAOUsuario {
         sql.append(" where id = ? ");
 
         Data.executeUpdate(conn, sql.toString(), usuario.getToken(), usuario.getExpiraEm()iraEm(), usuario.getId());
-
     }
 }

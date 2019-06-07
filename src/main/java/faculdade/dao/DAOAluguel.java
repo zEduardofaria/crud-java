@@ -53,8 +53,6 @@ public class DAOAluguel {
         sql.append(" where ");
         sql.append(" id = ? ");
 
-        try (Data.executeUpdate(conn, sql.toString(), id)) {
-
-        }
+        Data.executeQuery(conn, sql.toString(), id);
     }
 }
