@@ -13,7 +13,7 @@ public class DAOUsuario {
     public static TOUsuario getByToken(Connection conn, String token) throws Exception {
 
         StringBuilder sql = new StringBuilder();
-        sql.append(" select id, nome, email, senha, token, criadoEm, ativo, expiraEm from account ");
+        sql.append(" select id, nome, email, senha, token, criadoEm, ativo, expiraEm from usuario ");
         sql.append(" where ");
         sql.append(" token = ? ");
         sql.append(" and ativo ");
@@ -40,7 +40,7 @@ public class DAOUsuario {
     public static TOUsuario getByEmail(Connection conn, TOUsuario model) throws Exception {
 
         StringBuilder sql = new StringBuilder();
-        sql.append(" select id, nome, email, senha, token, criadoEm, ativo, expiraEm from account ");
+        sql.append(" select id, nome, email, senha, token, criadoEm, ativo, expiraEm from usuario ");
         sql.append(" where ");
         sql.append(" email = ? ");
         sql.append(" and ativo ");
@@ -66,7 +66,7 @@ public class DAOUsuario {
     public static List<TOUsuario> lista(Connection conn) throws Exception {
 
         StringBuilder sql = new StringBuilder();
-        sql.append(" select id, nome, email, senha, token, criadoEm, ativo, expiraEm from account ");
+        sql.append(" select id, nome, email, senha, token, criadoEm, ativo, expiraEm from usuario ");
         sql.append(" where ");
         sql.append(" ativo ");
         sql.append(" order by nome ");
@@ -92,14 +92,14 @@ public class DAOUsuario {
 
     public static void inserir(Connection conn, TOUsuario usuario) throws Exception {
         StringBuilder sql = new StringBuilder();
-        sql.append(" insert into account(id, nome, email, senha, criadoEm, ativo) values ");
+        sql.append(" insert into usuario(id, nome, email, senha, criadoEm, ativo) values ");
         sql.append(" (?, ?, ?, ?, now(), true) ");
         Data.executeUpdate(conn, sql.toString(), usuario.getId(), usuario.getNome(), usuario.getEmail(), usuario.getSenha());
     }
 
     public static void atualizar(Connection conn, TOUsuario usuario) throws Exception {
         StringBuilder sql = new StringBuilder();
-        sql.append(" update account set nome = ?, email = ?, senha = ? ");
+        sql.append(" update usuario set nome = ?, email = ?, senha = ? ");
         sql.append(" where id = ? ");
         Data.executeUpdate(conn, sql.toString(), usuario.getNome(), usuario.getEmail(), usuario.getSenha(), usuario.getId());
     }
@@ -107,7 +107,7 @@ public class DAOUsuario {
     public static TOUsuario autenticar(Connection conn, TOUsuario usuario) throws Exception {
 
         StringBuilder sql = new StringBuilder();
-        sql.append(" select id, nome, email, senha, token, criadoEm, ativo, expiraEm from account ");
+        sql.append(" select id, nome, email, senha, token, criadoEm, ativo, expiraEm from usuario ");
         sql.append(" where ");
         sql.append(" email = ? and senha = ? ");
         sql.append(" and ativo ");
@@ -134,7 +134,7 @@ public class DAOUsuario {
     public static void atualizarToken(Connection conn, TOUsuario usuario) throws Exception {
 
         StringBuilder sql = new StringBuilder();
-        sql.append(" update account ");
+        sql.append(" update usuario ");
         sql.append(" set token = ?, expiraEm = ? ");
         sql.append(" where id = ? ");
 

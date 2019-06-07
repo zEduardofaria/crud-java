@@ -38,8 +38,8 @@ public class BOUsuario {
         }
     }
 
-    private static String generateRandomPassword() {
-        byte[] array = new byte[8];
+    private static String generateRandomPassword(int qtd) {
+        byte[] array = new byte[qtd];
         new Random().nextBytes(array);
 
         return new String(array, Charset.forName("UTF-8"));
@@ -51,7 +51,7 @@ public class BOUsuario {
             TOUsuario usuario = DAOUsuario.getByEmail(conn, model);
             if (usuario != null) {
 
-                String novaSenha = generateRandomPassword();
+                String novaSenha = generateRandomPassword(8);
 
                 usuario.setSenha(Encrypt.sha1(novaSenha));
                 DAOUsuario.atualizar(conn, usuario);
@@ -98,7 +98,7 @@ public class BOUsuario {
                 expiredAt.addMinute(5);
 
                 usuario.setExpiraEm(expiredAt.getTimestamp());
-
+                usuario.setToken(generateRandomPassword(40));
                 DAOUsuario.atualizarToken(conn, usuario);
             }
 

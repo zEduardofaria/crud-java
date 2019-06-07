@@ -4,7 +4,7 @@ package faculdade.api;
 import javax.ws.rs.core.Application;
 import java.util.Set;
 
-@javax.ws.rs.ApplicationPath("v1")
+@javax.ws.rs.ApplicationPath("faculdade")
 public class ApplicationConfig extends Application {
 
     @Override
@@ -22,6 +22,13 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
 
+        resources.add(ServiceAluguel.class);
+        resources.add(ServiceAluno.class);
+        resources.add(ServiceDisciplina.class);
+        resources.add(ServiceLivro.class);
+        resources.add(ServiceMateria.class);
+        resources.add(ServiceProfessor.class);
+        resources.add(ServiceTurma.class);
         resources.add(ServiceUsuario.class);
         resources.add(ServiceVersion.class);
 
