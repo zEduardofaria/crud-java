@@ -21,6 +21,7 @@ public class DAOAluno {
 
             while (rs.next()) {
                 TOAluno aluno = new TOAluno();
+                aluno.setId(rs.getInt("id"));
                 aluno.setNome(rs.getString("nome"));
                 aluno.setMatricula(rs.getString("matricula"));
                 lista.add(aluno);
@@ -47,10 +48,8 @@ public class DAOAluno {
     public static void deletar(Connection conn, int id) throws Exception {
 
         StringBuilder sql = new StringBuilder();
-        sql.append(" delete from Aluno");
-        sql.append(" where ");
-        sql.append(" id = ? ");
+        sql.append(" delete from Aluno where id = ?");
 
-        Data.executeQuery(conn, sql.toString(), id);
+        Data.executeUpdate(conn, sql.toString(), id);
     }
 }

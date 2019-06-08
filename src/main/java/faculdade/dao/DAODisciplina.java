@@ -47,10 +47,8 @@ public class DAODisciplina {
     public static void deletar(Connection conn, int id) throws Exception {
 
         StringBuilder sql = new StringBuilder();
-        sql.append(" delete from Disciplina");
-        sql.append(" where ");
-        sql.append(" id = ? ");
+        sql.append(" delete from Disciplina where id = ? ");
 
-        Data.executeQuery(conn, sql.toString(), id);
+        Data.executeUpdate(conn, sql.toString(), id);
     }
 }

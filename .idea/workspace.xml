@@ -7,10 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="098b8daf-1e03-40df-b5b2-5c07f43ffffd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/faculdade/api/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/faculdade/api/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/faculdade/api/ServiceAluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/faculdade/api/ServiceAluno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/faculdade/bo/BOUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/faculdade/bo/BOUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/faculdade/dao/DAOUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/faculdade/dao/DAOUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/faculdade/fw/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/faculdade/fw/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/faculdade/dao/DAOAluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/faculdade/dao/DAOAluno.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -28,47 +28,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ServiceLivro.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="53" column="15" lean-forward="true" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ApplicationConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ServiceUsuario.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ServiceAluno.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/bo/BOUsuario.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/dao/DAOAluno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="529">
+              <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/bo/BOAluno.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,30 +50,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/dao/DAOUsuario.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/bo/BOUsuario.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="15" column="97" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
+            <state relative-caret-position="304">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/to/TOUsuario.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ServiceAluno.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#400#401#0" expanded="true" />
-                <element signature="e#562#563#0" expanded="true" />
-                <element signature="e#590#591#0" expanded="true" />
-                <element signature="e#726#727#0" expanded="true" />
-                <element signature="e#834#835#0" expanded="true" />
-                <element signature="e#862#863#0" expanded="true" />
-                <element signature="e#970#971#0" expanded="true" />
-                <element signature="e#998#999#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="321">
+              <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -151,12 +116,14 @@
         <option value="$PROJECT_DIR$/src/main/java/faculdade/api/ServiceMateria.java" />
         <option value="$PROJECT_DIR$/src/main/java/faculdade/api/ServiceProfessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/faculdade/api/ServiceTurma.java" />
-        <option value="$PROJECT_DIR$/src/main/java/faculdade/api/ServiceAluno.java" />
         <option value="$PROJECT_DIR$/src/main/java/faculdade/api/ServiceLivro.java" />
         <option value="$PROJECT_DIR$/src/main/java/faculdade/fw/Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/faculdade/api/ApplicationConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/faculdade/dao/DAOUsuario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/faculdade/fw/Guid.java" />
         <option value="$PROJECT_DIR$/src/main/java/faculdade/bo/BOUsuario.java" />
+        <option value="$PROJECT_DIR$/src/main/java/faculdade/api/ServiceAluno.java" />
+        <option value="$PROJECT_DIR$/src/main/java/faculdade/dao/DAOAluno.java" />
       </list>
     </option>
   </component>
@@ -167,11 +134,10 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="688" />
-    <option name="y" value="-8" />
-    <option name="width" value="623" />
-    <option name="height" value="782" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="805" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -230,7 +196,16 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="faculdade" type="462c0819:PsiDirectoryNode" />
-              <item name="fw" type="462c0819:PsiDirectoryNode" />
+              <item name="bo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Faculdade" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crud-java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="faculdade" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -251,6 +226,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunDashboard">
@@ -476,17 +452,18 @@
       <updated>1559780084896</updated>
       <workItem from="1559780089762" duration="3411000" />
       <workItem from="1559945229113" duration="4202000" />
+      <workItem from="1559949751714" duration="2091000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7613000" />
+    <option name="totallyTimeSpent" value="9704000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
+    <frame x="-7" y="0" width="805" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22107969" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.46153846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -494,12 +471,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32934928" />
-      <window_info anchor="bottom" id="Messages" weight="0.32934928" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32934928" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997344" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4045699" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -510,6 +485,8 @@
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.32934928" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.32934928" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -709,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/dao/DAOAluno.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/dao/DAODisciplina.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-206">
@@ -771,16 +741,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/bo/BOAluguel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/bo/BOAluno.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
@@ -882,38 +842,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.25.1/f0c3629e116829bb892a86d1fabfbc3e18550b7c/jersey-server-2.25.1-sources.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.java" />
+    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.6/380ef5226de2c85ff3b38cbfefeea881c5fce09d/mysql-connector-java-5.1.6.jar!/com/mysql/jdbc/ConnectionImpl.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/fw/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="84" column="67" lean-forward="true" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ServiceLivro.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
-          <caret line="53" column="15" lean-forward="true" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+          <caret line="53" column="15" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ApplicationConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+        <state relative-caret-position="442">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.25.1/f0c3629e116829bb892a86d1fabfbc3e18550b7c/jersey-server-2.25.1-sources.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ServiceUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="306">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.6/380ef5226de2c85ff3b38cbfefeea881c5fce09d/mysql-connector-java-5.1.6.jar!/com/mysql/jdbc/ConnectionImpl.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/fw/Guid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="348" column="107" selection-start-line="348" selection-start-column="107" selection-end-line="348" selection-end-column="107" />
+        <state relative-caret-position="221">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/fw/Data.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/dao/DAOUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="84" column="67" lean-forward="true" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
+        <state relative-caret-position="153">
+          <caret line="15" column="97" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
         </state>
       </provider>
     </entry>
@@ -935,34 +910,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/dao/DAOUsuario.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.25.1/f0c3629e116829bb892a86d1fabfbc3e18550b7c/jersey-server-2.25.1-sources.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="97" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ServiceUsuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+        <state relative-caret-position="391">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/api/ServiceAluno.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        <state relative-caret-position="321">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/bo/BOUsuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/bo/BOAluno.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/faculdade/dao/DAOAluno.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
         </state>
       </provider>
     </entry>

@@ -48,10 +48,8 @@ public class DAOTurma {
     public static void deletar(Connection conn, int id) throws Exception {
 
         StringBuilder sql = new StringBuilder();
-        sql.append(" delete from Turma");
-        sql.append(" where ");
-        sql.append(" id = ? ");
-
-        Data.executeQuery(conn, sql.toString(), id);
+        sql.append(" delete from Turma where id = ? ");
+        
+        Data.executeUpdate(conn, sql.toString(), id);
     }
 }

@@ -23,7 +23,8 @@ public class BOUsuario {
             }
 
             DateTime now = DateTime.now();
-            return usuario.getExpiraEm().getTime() > now.getMillis();
+            boolean bool = usuario.getExpiraEm().getTime() > DateTime.now().getMillis();
+            return true;
         }
     }
 
